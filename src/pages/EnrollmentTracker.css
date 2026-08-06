@@ -1,0 +1,99 @@
+.enroll-tracker__grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 340px 1fr;
+  align-items: start;
+}
+
+.enroll-tracker__form {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.03);
+}
+
+.enroll-tracker__form-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 12px;
+}
+
+.enroll-tracker__form-row input {
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.enroll-tracker__form-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
+}
+
+.btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background: #4338ca;
+  color: #fff;
+  border-color: rgba(67,56,202,0.15);
+}
+
+.btn-danger {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+.enroll-tracker__table-wrap {
+  overflow: auto;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(15,23,42,0.03);
+}
+
+.enroll-tracker__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.enroll-tracker__table th,
+.enroll-tracker__table td {
+  text-align: left;
+  padding: 12px 14px;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.enroll-tracker__table th {
+  background: #fafafa;
+  font-weight: 600;
+  position: sticky;
+  top: 0;
+}
+
+.enroll-tracker__table tbody tr:hover {
+  background: #f8fafc;
+}
+
+@media (max-width: 900px) {
+  .enroll-tracker__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .enroll-tracker__form-row {
+    grid-template-columns: 1fr;
+  }
+}

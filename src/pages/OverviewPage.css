@@ -1,0 +1,144 @@
+.overview-page {
+  display: grid;
+  gap: 24px;
+}
+
+.overview-page__header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px 0 8px;
+}
+
+.overview-page__breadcrumb {
+  margin: 0;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.overview-page__breadcrumb span {
+  color: #111827;
+}
+
+.overview-page__title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.overview-page__subtitle {
+  margin: 8px 0 0;
+  max-width: 680px;
+  color: #475569;
+  line-height: 1.75;
+}
+
+.overview-page__stat-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.overview-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+}
+
+.overview-card--accent {
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.overview-card h2 {
+  margin: 0 0 14px;
+  font-size: 18px;
+  color: #1e3a8a;
+}
+
+.overview-card p,
+.overview-card ul {
+  margin: 0;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.overview-card ul {
+  padding-left: 18px;
+}
+
+.overview-page__sections {
+  display: grid;
+  gap: 20px;
+}
+
+.overview-section {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.overview-section__heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.overview-section__heading h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.overview-section__heading span {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.overview-section__text {
+  margin: 0 0 16px;
+  color: #475569;
+}
+
+.overview-section ul {
+  margin: 0;
+  padding-left: 20px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.overview-section li {
+  margin-bottom: 10px;
+}
+
+.overview-item-link {
+  color: #2563eb;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.overview-item-link:hover {
+  color: #1d4ed8;
+}
+
+@media (max-width: 640px) {
+  .overview-page__header,
+  .overview-page__stat-grid,
+  .overview-page__sections {
+    gap: 16px;
+  }
+
+  .overview-card,
+  .overview-section {
+    padding: 20px;
+  }
+}
