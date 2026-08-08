@@ -1,6 +1,6 @@
 # Admin Dashboard
 
-Live demo: https://admin-dashboard-one-bay-50.vercel.app
+Live demo: admin-lime-zeta.vercel.app
 
 ## About
 
