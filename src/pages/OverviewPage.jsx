@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { navConfig } from "../config/links";
+import heroImage from "../assets/hero.png";
 import "./OverviewPage.css";
 
 function OverviewPage() {
@@ -7,6 +8,18 @@ function OverviewPage() {
 
   return (
     <div className="overview-page">
+      <section className="overview-hero" style={{ backgroundImage: `linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.55)), url(${heroImage})` }}>
+        <div className="overview-hero__content">
+          <h1 className="overview-hero__title">DASHBOARD</h1>
+          <div className="overview-hero__divider" />
+          <p className="overview-hero__subtitle">BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p>
+          <div className="overview-hero__logos">
+            <img src="/logo-bsit.jpg" alt="BSIT logo" className="overview-hero__logo" />
+            <img src="/logo-ucl.jpg" alt="UCL logo" className="overview-hero__logo" />
+          </div>
+        </div>
+      </section>
+
       <div className="overview-page__header">
         <div>
           <p className="overview-page__breadcrumb">
@@ -20,11 +33,11 @@ function OverviewPage() {
       </div>
 
       <div className="overview-page__stat-grid">
-        <article className="overview-card overview-card--accent">
+        <article className="overview-card">
           <h2>Summary</h2>
           <p>
-            This dashboard organizes tools by category. Use the sidebar to switch between Faculty, Students,
-            Institution, and Department resources.
+            This dashboard is design for BSIT faculty and staff to manage and monitor various aspects of the program.
+             It provides quick access to key sections, including student records, course management, and administrative tools.
           </p>
         </article>
 

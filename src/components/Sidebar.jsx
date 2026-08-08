@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import { navConfig } from "../config/links";
 import "./Sidebar.css";
 
-function Sidebar({ collapsed, onToggle }) {
+function Sidebar() {
   // Track which sections are expanded. All open by default.
   const [openSections, setOpenSections] = useState(
     () => Object.fromEntries(navConfig.map((s) => [s.section, true]))
@@ -14,15 +14,12 @@ function Sidebar({ collapsed, onToggle }) {
   };
 
   return (
-    <aside className={`sidebar ${collapsed ? "sidebar--collapsed" : ""}`}>
+    <aside className="sidebar">
       <div className="sidebar__header">
         <div className="sidebar__logos">
           <img src="/logo-bsit.jpg" alt="PHINMA Union College of Laguna - BSIT" className="sidebar__logo-img" />
           <img src="/logo-ucl.jpg" alt="Union College of Laguna" className="sidebar__logo-img" />
         </div>
-        <button className="sidebar__toggle" onClick={onToggle} aria-label="Toggle sidebar">
-          ☰
-        </button>
       </div>
 
       <nav className="sidebar__nav">

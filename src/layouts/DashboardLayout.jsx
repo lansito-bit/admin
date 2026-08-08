@@ -4,11 +4,9 @@ import Sidebar from "../components/Sidebar";
 import "./DashboardLayout.css";
 
 function DashboardLayout() {
-  const [collapsed, setCollapsed] = useState(false);
-
   return (
     <div className="dashboard-layout">
-      <Sidebar collapsed={collapsed} onToggle={() => setCollapsed((c) => !c)} />
+      <Sidebar />
       <main className="dashboard-layout__content">
         <Outlet />
       </main>
