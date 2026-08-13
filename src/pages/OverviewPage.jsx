@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom";
-import { navConfig } from "../config/links";
 import heroImage from "../assets/hero.png";
 import "./OverviewPage.css";
 
 function OverviewPage() {
-  const sections = navConfig.filter((group) => group.section !== "Overview");
-
   return (
     <div className="overview-page">
-      <section className="overview-hero" style={{ backgroundImage: `linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.55)), url(${heroImage})` }}>
+      <section
+        className="overview-hero"
+        style={{
+          backgroundImage: `linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.55)), url(${heroImage})`,
+        }}
+      >
         <div className="overview-hero__content">
           <h1 className="overview-hero__title">DASHBOARD</h1>
           <div className="overview-hero__divider" />
@@ -37,52 +38,9 @@ function OverviewPage() {
           <h2>Summary</h2>
           <p>
             This dashboard is design for BSIT faculty and staff to manage and monitor various aspects of the program.
-             It provides quick access to key sections, including student records, course management, and administrative tools.
+            It provides quick access to key sections, including student records, course management, and administrative tools.
           </p>
         </article>
-
-        <article className="overview-card">
-          <h2>Key sections</h2>
-          <ul>
-            {sections.map((group) => (
-              <li key={group.section}>
-                {group.section} — {group.items.length} items
-              </li>
-            ))}
-          </ul>
-        </article>
-      </div>
-
-      <div className="overview-page__sections">
-        {sections.map((group) => (
-          <section className="overview-section" key={group.section}>
-            <div className="overview-section__heading">
-              <h3>{group.section}</h3>
-              <span>{group.items.length} items</span>
-            </div>
-            <p className="overview-section__text">Important items in this section.</p>
-            <ul>
-              {group.items.map((item) => (
-                <li key={item.label}>
-                  {item.path ? (
-                    <Link className="overview-item-link" to={item.path}>
-                      {item.label}
-                    </Link>
-                  ) : (
-                    <a
-                      className="overview-item-link"
-                      href={item.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
       </div>
     </div>
   );
